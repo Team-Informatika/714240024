@@ -19,14 +19,15 @@ body {
   border-radius: 10px;
 }
 .profile-container-img {
-  width: 130px;
+  width: 10px;
   height: 120px;
   border-radius: 50%;
   margin: 0 auto 20px;
   overflow: hidden;
   border: 4px solid #6c63ff;
 }
-.profile-container-img img {
+
+.profile .profile-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
