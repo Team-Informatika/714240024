@@ -4,15 +4,15 @@ renderHTML('content', 'home.html');
 
 onClick("github",myGithub);
 function myGithub() {
-    window.open('https://github.com/Ameringkseh', 'blank');
+    window.open('https://github.com/Muhammadbaiqi0', 'blank');
 }
 onClick("whatsapp",mywhatsapp);
 function mywhatsapp() {
-    window.open('https://whatsapp.com/6287723806103', 'blank');
+    window.open('https://whatsapp.com/6281366299487', 'blank');
 }
 onClick("instagram",myinstagram);
 function myinstagram() {
-    window.open('https://instagram.com/not_moch', 'blank');
+    window.open('https://instagram.com/muhammadbaihaqiii__', 'blank');
 }
 
 setInner("tex", "kontak saya:")
