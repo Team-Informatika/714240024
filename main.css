@@ -36,7 +36,7 @@ body {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #4CAF50;
+  border: 3px solid #913f43;
 }
 
 /* Info Styling */
@@ -54,7 +54,7 @@ body {
 
 .contact-info {
   font-size: 14px;
-  color: #4CAF50;
+  color: #7d3fa1;
   margin: 5px 0;
 }
 
@@ -97,7 +97,7 @@ body {
 }
 
 .skills i {
-  color: #4CAF50;
+  color: #274d86;
   margin-right: 8px;
 }
 
