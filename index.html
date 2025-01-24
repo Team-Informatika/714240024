@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cool Web Profile</title>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kartu Nama Keren</title>
+  <link rel="stylesheet" href="main.css">
+  <!-- Font Awesome untuk ikon sosial media -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script type="module" src="main.js"></script>
 </head>
 <body>
-    <div class="profile-container">
-        <div class="profile-img">
-            <img src="aw.jpg" alt="Profile Picture">
-        </div>
-        <h1>Mhd Baihaqi Siregar</h1>
-        <p>Hello! I'm a web developer with a passion for creating beautiful and functional websites. Let's connect!,And I'm good at playing games, namely Mobile Legends games</p>
-        <div class="rate">
-            <h6>Rate per Hour: $5</h6>
-          </div>
-        <div class="social-icons" id="so">
-            <h3 id="tex"></h3>
-            <i class="fa-brands fa-instagram" id="instagram"></i>
-            <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
-            <i class="fa-brands fa-github" id="github"></i>
-        </div>
+
+  <div class="card">
+    <div class="profile">
+      <img src="dokja.jpg" alt="Foto Profil" class="profile-img">
+    </div>
+    <div class="info">
+      <h1>Rafli Mochamad Ramadhan</h1>
+      <p class="job-title">Web Developer</p>
+      <p class="contact-info">Email: raflimramadhan.204@gmail.com</p>
+      <p class="contact-info">Phone: (123) 456-7890</p>
     </div>
 
-    <script type="module" src="./main.js"></script>
-    <div id="content">Loading....</div>
+    <!-- About Me -->
+    <div class="about-me">
+      <h3>About Me</h3>
+      <p>I'm a passionate web developer with a love for creating beautiful and functional websites. I enjoy learning new technologies and improving my skills every day.</p>
+
+      <h4>Rate per hour:Rp. 500,00 </h4>
+    </div>
+
+    <!-- Skills -->
+    <div class="skills">
+      <h3>Skills</h3>
+      <ul>
+        <li><i class="fab fa-html5"></i> HTML</li>
+        <li><i class="fab fa-css3-alt"></i> CSS</li>
+        <li><i class="fab fa-js-square"></i> JavaScript</li>
+        <li><i class="fab fa-react"></i> React</li>
+        <li><i class="fab fa-node-js"></i> Node.js</li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="social-icons" id="so">
+      <h3 id="tex"></h3>
+      <i class="fa-brands fa-instagram" id="instagram"></i>
+      <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+      <i class="fa-brands fa-github" id="github"></i>
+    </div>
+
+        <!-- QR Code -->
+        <div class="qr-code">
+            <h3>Scan for more</h3>
+            <img src="scan me!_qrcode.png" alt="QR Code" class="qr-img">
+          </div>
+
+  </div>
+  <div id="content">Loading....</div>
+
 </body>
 </html>
