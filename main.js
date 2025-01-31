@@ -8,7 +8,7 @@ function myGithub() {
 }
 onClick("whatsapp",mywhatsapp);
 function mywhatsapp() {
-    window.open('https://whatsapp.com/6281366299487', 'blank');
+    window.open('https://wa.me/+6281366299487', 'blank');
 }
 onClick("instagram",myinstagram);
 function myinstagram() {
