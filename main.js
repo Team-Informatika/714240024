@@ -4,7 +4,7 @@ renderHTML('content', 'home.html');
 
 onClick("github",myGithub);
 function myGithub() {
-    window.open('https://github.com/Muhammadbaiqi0', 'blank');
+    window.open('https://github.com/Muhammadbaihaqi0', 'blank');
 }
 onClick("whatsapp",mywhatsapp);
 function mywhatsapp() {
