@@ -1,18 +1,22 @@
-import {renderHTML,onClick,setInner} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/element.js";
+import { getJSON } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/api.js"
+import { renderHTML, setInner } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/element.js"
 
 renderHTML('content', 'home.html');
 
-onClick("github",myGithub);
-function myGithub() {
-    window.open('https://github.com/Muhammadbaihaqi0', 'blank');
-}
-onClick("whatsapp",mywhatsapp);
-function mywhatsapp() {
-    window.open('https://wa.me/+6281366299487', 'blank');
-}
-onClick("instagram",myinstagram);
-function myinstagram() {
-    window.open('https://instagram.com/muhammadbaihaqiii__', 'blank');
-}
+getJSON("https://t.if.co.id/json/bai.json","null","null",responseFunction);
+function responseFunction(response) {
+  console.log('HTTP Status:', response.status);
+  console.log('Response Data:', response.data);
 
-setInner("tex", "kontak saya:")
+  if (response.status ===200) {
+    const data = response.data;
+
+    const konten = `
+    <p>uy: ${data.uy}</p>
+    `;
+
+    setInner("uy", konten);
+} else {
+    setInner("uy", '<p>Error: Unable to fetch data</p>');
+}
+}
