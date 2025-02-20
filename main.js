@@ -72,7 +72,7 @@ function responseFunction(masukkan) {
   dataContainer.appendChild(socialContainer);
 }
 
-const colors = ['#2f2f3f', '#464685'];
+const colors = ['#000'];
       let currentColorIndex = 0;
 
       // Ubah warna latar belakang setiap 2 detik
