@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #3e3ea0;
+  background-color: #ccbc2b;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@ body {
   position: relative;
   background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 255, 213, 0.836);
+  box-shadow: 0 4px 6px rgba(189, 13, 80, 0.836);
   padding: 20px;
   width: 400px;
   text-align: center;
@@ -26,7 +26,7 @@ body {
 }
 
 .card:hover {
-  box-shadow: 0 10px 0 rgba(0, 225, 255, 0.836);
+  box-shadow: 0 10px 0 rgba(22, 73, 80, 0.836);
   transform: translateY(-5px);
 }
 
@@ -45,7 +45,7 @@ body {
 
 .card p#alt {
   font-size: 18px;
-  color: #28a745;
+  color: #9c2366;
   margin-top: 10px;
 }
 
@@ -70,6 +70,39 @@ body {
   color: #e4405f; /* Warna merah muda untuk Instagram */
 }
 
-.social-link #github:hover {
+.social-link
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#github:hover {
   color: #333; /* Warna hitam untuk GitHub */
 }
