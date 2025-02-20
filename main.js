@@ -63,13 +63,11 @@ function responseFunction(masukkan) {
 
   
 
-  // Tambahkan elemen ke dalam card-item
-  dataContainer.appendChild(avatar);
   dataContainer.appendChild(name);
-  dataContainer.appendChild(ug);
+  dataContainer.appendChild(origin);
   dataContainer.appendChild(skill);
   dataContainer.appendChild(rate);
-  dataContainer.appendChild(socialContainer);
+  dataContainer.appendChild(about);
 }
 
 const colors = ['#000'];
