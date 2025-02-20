@@ -1,187 +1,79 @@
-/* Resetting some default styles */
 * {
-  margin: auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #3e3ea0;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-/* Kartu Nama Styling */
 .card {
-  background-color: #fff;
-  width: 320px;
-  max-width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 255, 213, 0.836);
   padding: 20px;
+  width: 400px;
   text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* Profil Styling */
-.profile {
-  margin-bottom: 20px;
+.card:hover {
+  box-shadow: 0 10px 0 rgba(0, 225, 255, 0.836);
+  transform: translateY(-5px);
 }
 
-.profile-img {
-  width: 120px;
-  height: 120px;
+.card img#avatar {
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #913f43;
+  margin-bottom: 15px;
 }
 
-/* Info Styling */
-.info h1 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-}
-
-.job-title {
-  font-size: 16px;
-  color: #777;
-  margin: 10px 0;
-}
-
-.contact-info {
-  font-size: 14px;
-  color: #407797;
-  margin: 5px 0;
-}
-
-/* About Me Section */
-.about-me {
-  margin-top: 20px;
-  text-align: left;
-}
-
-.about-me h3,h4 {
-  font-size: 18px;
+.card h3#konten {
+  font-size: 45px;
   margin-bottom: 10px;
+  color: #333333;
 }
 
-.about-me p {
-  font-size: 14px;
-  color: #555;
-}
-
-/* Skills Section */
-.skills {
-  margin-top: 20px;
-  text-align: left;
-}
-
-.skills h3 {
+.card p#rate {
   font-size: 18px;
-  margin-bottom: 10px;
+  color: #28a745;
+  margin-top: 10px;
 }
 
-.skills ul {
-  list-style-type: none;
-  padding: 0;
+/* sosial icon */
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
 }
 
-.skills li {
-  font-size: 14px;
-  color: #555;
-  margin: 5px 0;
+.social-icons i {
+  font-size: 50px;
+  color: #5555;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
-.skills i {
-  color: #274d86;
-  margin-right: 8px;
+.social-icons #instagram:hover {
+  color: #e4405f; /* Warna merah muda untuk Instagram */
 }
 
-/* Styling untuk div container */
-#so {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 20px;
-padding: 20px;
-background: linear-gradient(45deg, #923d80, #fad0c4);
-border-radius: 15px;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.social-icons #github:hover {
+  color: #333; /* Warna hitam untuk GitHub */
 }
 
-/* Efek animasi untuk ikon sosial */
-#so i {
-font-size: 40px;
-color: #ffffff;
-cursor: pointer;
-animation: blink 2s infinite ease-in-out;
-transition: transform 0.3s, color 0.3s;
-}
-
-/* Hover efek */
-#so i:hover {
-transform: scale(1.2);
-color: #f4e04d;
-text-shadow: 0 0 10px #f4e04d, 0 0 20px #f4e04d;
-}
-
-/* Animasi kelap-kelip */
-@keyframes blink {
-0%, 100% {
-  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
-}
-50% {
-  text-shadow: 0 0 15px #da58a4, 0 0 30px #b93f3f;
-}
-}
-
-/* Judul styling */
-#tex {
-font-size: 24px;
-font-weight: bold;
-color: #ffffff;
-text-align: center;
-margin-bottom: 15px;
-}
-
-
-/* Responsiveness */
-@media (max-width: 480px) {
-  .card {
-    width: 280px;
-    padding: 15px;
-  }
-
-  .profile-img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .info h1 {
-    font-size: 22px;
-  }
-
-  .job-title {
-    font-size: 14px;
-  }
-
-  .contact-info {
-    font-size: 13px;
-  }
-
-  .about-me h3, .skills h3 {
-    font-size: 16px;
-  }
-
-  .skills li, .about-me p {
-    font-size: 13px;
-  }
-
-  .social-media a {
-    font-size: 18px;
-  }
+.social-icons #wa:hover {
+  color: #25d366; /* Warna hijau untuk WhatsApp */
 }
