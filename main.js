@@ -44,7 +44,7 @@ function responseFunction(isi) {
     rate.textContent = isi.data.skill;
 
     const socialContainer = document.createElement("div");
-    socialContainer.classList.add("about");
+    socialContainer.classList.add("social-link");
     socialContainer.id = "so";
 
     isi.data.socialIcons.icons.forEach((icon) => {
