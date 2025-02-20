@@ -16,8 +16,8 @@ function renderDataDariJson() {
   getJSON("https://t.if.co.id/json/bai.json", responseFunction);
 }
 
-function responseFunction(isi) {
-  console.log(isi);
+function responseFunction(masukkan) {
+  console.log(masukkan);
 
   const dataContainer = document.getElementById("data");
   dataContainer.innerHTML = ""; // Hapus isi lama sebelum menambahkan data baru
@@ -73,7 +73,7 @@ function responseFunction(isi) {
   dataContainer.appendChild(socialContainer);
 }
 
-const colors = ['#2f2f3f', '#464685', '#1c1c8f', '#0d0d67', '#010143'];
+const colors = ['#2f2f3f', '#464685'];
       let currentColorIndex = 0;
 
       // Ubah warna latar belakang setiap 2 detik
