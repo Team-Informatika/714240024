@@ -44,7 +44,7 @@ function responseFunction(masukkan) {
     rate.textContent = isi.data.Rate;
 
     const socialContainer = document.createElement("div");
-    socialContainer.classList.add("social-icons");
+    socialContainer.classList.add("about");
     socialContainer.id = "so";
 
     isi.data.socialIcons.icons.forEach((icon) => {
