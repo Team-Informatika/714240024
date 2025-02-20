@@ -20,56 +20,58 @@ function responseFunction(masukkan) {
   console.log(masukkan);
 
   const dataContainer = document.getElementById("data");
-  dataContainer.innerHTML = ""; // Hapus isi lama sebelum menambahkan data baru
+    dataContainer.innerHTML = ""; // Hapus isi lama sebelum menambahkan data baru
 
-  const avatar = document.createElement("img");
-  avatar.id = "src";
-  avatar.src = isi.data.Foto;
+    const avatar = document.createElement("img");
+    avatar.src = isi.data.Foto;
+    avatar.alt = "Avatar";
+    avatar.id = "avatar";
 
-  const name = document.createElement("h3");
-  name.id = "name";
-  name.textContent = isi.data.Name;
+    const name = document.createElement("h3");
+    name.id = "konten";
+    name.textContent = isi.data.Name;
 
-  const origin = document.createElement("p");
-  ug.id = "origin";
-  ug.textContent = isi.data.origin;
+    const ug = document.createElement("p");
+    alt.id = "alt";
+    ug.textContent = isi.data.Ug;
 
-  const skill = document.createElement("p");
-  skill.id = "skill";
-  skill.textContent = isi.data.Skill;
+    const skill = document.createElement("p");
+    origin.id = "origin";
+    skill.textContent = isi.data.Skill;
 
-  const rate = document.createElement("p");
-  rate.id = "rate";
-  rate.textContent = isi.data.Rate;
+    const rate = document.createElement("p");
+    skill.id = "skill";
+    rate.textContent = isi.data.Rate;
 
-  const about = document.createElement("div");
-  socialContainer.classList.add("about");
-  socialContainer.id = "so";
+    const socialContainer = document.createElement("div");
+    socialContainer.classList.add("social-icons");
+    socialContainer.id = "so";
 
-  isi.data.socialIcons.icons.forEach((icon) => {
-      const linkElement = document.createElement("a");
-      linkElement.href = icon.url;
-      linkElement.target = "_blank";
-      linkElement.rel = "noopener noreferrer";
+    isi.data.socialIcons.icons.forEach((icon) => {
+        const linkElement = document.createElement("a");
+        linkElement.href = icon.url;
+        linkElement.target = "_blank";
+        linkElement.rel = "noopener noreferrer";
 
-      const iconElement = document.createElement("i");
-      iconElement.id = icon.id;
-      iconElement.className = icon.class;
-      iconElement.title = icon.type;
+        const iconElement = document.createElement("i");
+        iconElement.id = icon.id;
+        iconElement.className = icon.class;
+        iconElement.title = icon.type;
 
-      linkElement.appendChild(iconElement);
-      socialContainer.appendChild(linkElement);
-  });
+        linkElement.appendChild(iconElement);
+        socialContainer.appendChild(linkElement);
+    });
 
-  
+    
 
-  dataContainer.appendChild(name);
-  dataContainer.appendChild(origin);
-  dataContainer.appendChild(skill);
-  dataContainer.appendChild(rate);
-  dataContainer.appendChild(about);
+    // Tambahkan elemen ke dalam card-item
+    dataContainer.appendChild(avatar);
+    dataContainer.appendChild(name);
+    dataContainer.appendChild(alt);
+    dataContainer.appendChild(origin);
+    dataContainer.appendChild(skill);
+    dataContainer.appendChild(about);
 }
-
 const colors = ['#000'];
       let currentColorIndex = 0;
 
