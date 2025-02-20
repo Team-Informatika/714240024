@@ -22,17 +22,16 @@ function responseFunction(masukkan) {
   const dataContainer = document.getElementById("data");
   dataContainer.innerHTML = ""; // Hapus isi lama sebelum menambahkan data baru
 
-  const avatar = document.createElement("img");
+  const avatar = document.createElement("src");
+  avatar.id = "src";
   avatar.src = isi.data.Foto;
-  avatar.alt = "Avatar";
-  avatar.id = "avatar";
 
   const name = document.createElement("h3");
   name.id = "konten";
   name.textContent = isi.data.Name;
 
   const ug = document.createElement("p");
-  ug.id = "ug";
+  ug.id = "origin";
   ug.textContent = isi.data.Ug;
 
   const skill = document.createElement("p");
