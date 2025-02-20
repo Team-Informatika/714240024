@@ -22,7 +22,7 @@ function responseFunction(masukkan) {
   const dataContainer = document.getElementById("data");
   dataContainer.innerHTML = ""; // Hapus isi lama sebelum menambahkan data baru
 
-  const avatar = document.createElement("src");
+  const avatar = document.createElement("img");
   avatar.id = "src";
   avatar.src = isi.data.Foto;
 
@@ -43,7 +43,7 @@ function responseFunction(masukkan) {
   rate.textContent = isi.data.Rate;
 
   const socialContainer = document.createElement("div");
-  socialContainer.classList.add("social-icons");
+  socialContainer.classList.add("about");
   socialContainer.id = "so";
 
   isi.data.socialIcons.icons.forEach((icon) => {
