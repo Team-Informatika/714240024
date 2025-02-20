@@ -1,6 +1,6 @@
 import { getJSON } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.1/api.js";
 import { renderHTML } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.1/element.js";
-import { getHash, onHashChange } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.1/url.js"
+import { getHash, onHashChange } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.1/url.js";
 
 onHashChange(wow);
 function wow() {
@@ -13,70 +13,65 @@ function wow() {
 }
 
 function renderDataDariJson() {
-  getJSON("https://t.if.co.id/json/bai.json", responseFunction);
+    getJSON("https://t.if.co.id/json/bai.json", responseFunction);
 }
 
 function responseFunction(isi) {
-  console.log(isi);
+    console.log(isi);
+    const data = isi; // Menggunakan langsung objek JSON yang diterima
 
-  const dataContainer = document.getElementById("data");
+    const dataContainer = document.getElementById("data");
     dataContainer.innerHTML = ""; // Hapus isi lama sebelum menambahkan data baru
 
     const avatar = document.createElement("img");
-    avatar.src = isi.data.Foto;
-    avatar.alt = "Avatar";
+    avatar.src = data.src;
+    avatar.alt = data.alt;
     avatar.id = "avatar";
 
     const name = document.createElement("h3");
     name.id = "konten";
-    name.textContent = isi.data.Name;
+    name.textContent = data.name;
 
-    const ug = document.createElement("p");
-    alt.id = "alt";
-    ug.textContent = isi.data.alt;
+    const origin = document.createElement("p");
+    origin.id = "origin";
+    origin.textContent = `Origin: ${data.origin}`;
 
     const skill = document.createElement("p");
-    origin.id = "origin";
-    skill.textContent = isi.data.origin;
-
-    const rate = document.createElement("p");
     skill.id = "skill";
-    rate.textContent = isi.data.skill;
+    skill.textContent = `Skill: ${data.skill}`;
+
+    const aboutTitle = document.createElement("h4");
+    aboutTitle.textContent = data.about.title;
 
     const socialContainer = document.createElement("div");
     socialContainer.classList.add("social-link");
     socialContainer.id = "so";
 
-    isi.data.socialIcons.icons.forEach((icon) => {
-        const linkElement = document.createElement("a");
-        linkElement.href = icon.url;
-        linkElement.target = "_blank";
-        linkElement.rel = "noopener noreferrer";
-
-        const iconElement = document.createElement("i");
-        iconElement.id = icon.id;
-        iconElement.className = icon.class;
-        iconElement.title = icon.type;
-
-        linkElement.appendChild(iconElement);
-        socialContainer.appendChild(linkElement);
+    data.about["social-media"].forEach((icon) => {
+        if (icon.url) {
+            const linkElement = document.createElement("a");
+            linkElement.href = icon.url;
+            linkElement.target = "_blank";
+            linkElement.rel = "noopener noreferrer";
+            linkElement.textContent = icon.type;
+            socialContainer.appendChild(linkElement);
+        }
     });
 
-    
-
-    // Tambahkan elemen ke dalam card-item
+    // Tambahkan elemen ke dalam container
     dataContainer.appendChild(avatar);
     dataContainer.appendChild(name);
-    dataContainer.appendChild(alt);
     dataContainer.appendChild(origin);
     dataContainer.appendChild(skill);
-    dataContainer.appendChild(about);
+    dataContainer.appendChild(aboutTitle);
+    dataContainer.appendChild(socialContainer);
 }
-const colors = ['#000'];
-      let currentColorIndex = 0;
 
-      // Ubah warna latar belakang setiap 2 detik
-      setInterval(function() {
-          document.body.style.backgroundColor = colors[currentColorIndex];
-          currentColorIndex = (currentColorIndex + 1) % colors.length;
-      }, 2000);
+const colors = ['#000'];
+let currentColorIndex = 0;
+
+// Ubah warna latar belakang setiap 2 detik
+setInterval(function() {
+    document.body.style.backgroundColor = colors[currentColorIndex];
+    currentColorIndex = (currentColorIndex + 1) % colors.length;
+}, 2000);
