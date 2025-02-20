@@ -33,15 +33,15 @@ function responseFunction(isi) {
 
     const ug = document.createElement("p");
     alt.id = "alt";
-    ug.textContent = isi.data.Ug;
+    ug.textContent = isi.data.alt;
 
     const skill = document.createElement("p");
     origin.id = "origin";
-    skill.textContent = isi.data.Skill;
+    skill.textContent = isi.data.origin;
 
     const rate = document.createElement("p");
     skill.id = "skill";
-    rate.textContent = isi.data.Rate;
+    rate.textContent = isi.data.skill;
 
     const socialContainer = document.createElement("div");
     socialContainer.classList.add("about");
