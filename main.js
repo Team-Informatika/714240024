@@ -27,12 +27,12 @@ function responseFunction(masukkan) {
   avatar.src = isi.data.Foto;
 
   const name = document.createElement("h3");
-  name.id = "konten";
+  name.id = "name";
   name.textContent = isi.data.Name;
 
-  const ug = document.createElement("p");
+  const origin = document.createElement("p");
   ug.id = "origin";
-  ug.textContent = isi.data.Ug;
+  ug.textContent = isi.data.origin;
 
   const skill = document.createElement("p");
   skill.id = "skill";
@@ -42,7 +42,7 @@ function responseFunction(masukkan) {
   rate.id = "rate";
   rate.textContent = isi.data.Rate;
 
-  const socialContainer = document.createElement("div");
+  const about = document.createElement("div");
   socialContainer.classList.add("about");
   socialContainer.id = "so";
 
