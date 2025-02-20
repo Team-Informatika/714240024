@@ -16,8 +16,8 @@ function renderDataDariJson() {
   getJSON("https://t.if.co.id/json/bai.json", responseFunction);
 }
 
-function responseFunction(masukkan) {
-  console.log(masukkan);
+function responseFunction(isi) {
+  console.log(isi);
 
   const dataContainer = document.getElementById("data");
     dataContainer.innerHTML = ""; // Hapus isi lama sebelum menambahkan data baru
